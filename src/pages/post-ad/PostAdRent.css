@@ -1,0 +1,395 @@
+.form-container {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+  margin-bottom: 60px;
+  width: 100%;
+}
+
+.form-container h3 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.form-container hr {
+  width: 500px;
+  margin-top: 30px;
+  margin-bottom: 40px;
+  border-color: #196cdf;
+  opacity: 0.4;
+}
+
+.postad-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.post-drp-down {
+  width: 500px;
+}
+
+.post-drp-down.MuiOutlinedInput-root {
+  border-radius: 50px;
+  padding-right: 60px;
+  margin-bottom: 10px;
+  background-color: #ffffff;
+  height: 40px;
+  font-size: 15px;
+}
+
+.des-text-area {
+  width: 500px;
+  font-size: 15px;
+}
+
+.title {
+  width: 500px;
+}
+
+.title .MuiOutlinedInput-root {
+  border-radius: 50px !important;
+  height: 40px !important;
+  background-color: white !important; /* Ensure white background */
+  margin-bottom: 20px;
+  font-size: 15px;
+}
+
+.title .MuiOutlinedInput-input {
+  padding: 20px !important;
+}
+
+/* Remove blue shadow on focus */
+.title .MuiOutlinedInput-root.Mui-focused {
+  box-shadow: none !important;
+  border-color: #ff9d3d !important; /* Optional: Match button color */
+}
+
+/* Remove autofill background (Chrome) */
+.title input:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0px 1000px white inset !important;
+  box-shadow: 0 0 0px 1000px white inset !important;
+}
+
+.post-txt-field {
+  width: 250px;
+}
+
+.post-txt-field .MuiOutlinedInput-root {
+  border-radius: 50px !important;
+  height: 40px !important;
+  background-color: white !important; /* Ensure white background */
+  margin-bottom: 20px;
+  font-size: 15px;
+}
+
+.post-txt-field .MuiOutlinedInput-input {
+  padding: 20px !important;
+}
+
+/* Remove blue shadow on focus */
+.post-txt-field .MuiOutlinedInput-root.Mui-focused {
+  box-shadow: none !important;
+  border-color: #ff9d3d !important; /* Optional: Match button color */
+}
+
+/* Remove autofill background (Chrome) */
+.post-txt-field input:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0px 1000px white inset !important;
+  box-shadow: 0 0 0px 1000px white inset !important;
+}
+
+.post-month-drp-down {
+  width: 250px;
+}
+
+.post-month-drp-down.MuiOutlinedInput-root {
+  border-radius: 50px;
+  padding-right: 60px;
+  margin-bottom: 10px;
+  background-color: #ffffff;
+  height: 40px;
+  font-size: 15px;
+}
+
+.des-text-area .MuiOutlinedInput-root {
+  align-items: start;
+  border-radius: 50px;
+  margin-bottom: 40px;
+  background-color: #ffffff;
+  height: 300px;
+  width: 500px;
+  font-size: 15px;
+}
+
+.post-unit-drp-down {
+  width: 250px;
+}
+
+.post-unit-drp-down.MuiOutlinedInput-root {
+  border-radius: 50px;
+  padding-right: 60px;
+  margin-bottom: 10px;
+  background-color: #ffffff;
+  height: 40px;
+  font-size: 15px;
+}
+
+.add-number {
+  width: 400px;
+}
+
+.add-number .MuiOutlinedInput-root {
+  border-radius: 50px;
+  margin-bottom: 20px;
+  background-color: #ffffff;
+  height: 40px;
+  font-size: 15px;
+}
+
+.number-option {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.add-num-option {
+  display: flex;
+  justify-content: start;
+  width: 520px;
+  gap: 20px;
+  font-size: 15px;
+}
+
+.card-add {
+  width: 80px;
+  height: 80px;
+  border: 1px dashed #ff9d3d;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  background-color: #dcdcdc;
+}
+
+.add-photo-div {
+  display: flex;
+  gap: 5px;
+  width: 500px;
+}
+
+.sub-card {
+  width: 80px;
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.sub-img-card {
+  width: 80px;
+  height: 80px;
+}
+
+.check-box-field {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
+  width: 500px;
+}
+
+.radio-field {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  width: 500px;
+}
+
+@media (max-width: 1024px) {
+  .post-drp-down {
+    width: 500px;
+  }
+  .des-text-area .MuiOutlinedInput-root {
+    align-items: start;
+    width: 500px;
+    height: 500px;
+  }
+  .post-txt-field {
+    width: 250px;
+  }
+  .post-month-drp-down {
+    width: 250px;
+  }
+
+  .post-unit-drp-down {
+    width: 250px;
+  }
+  .title {
+    width: 500px;
+  }
+  .number {
+    width: 400px;
+  }
+  .form-container hr {
+    width: 500px;
+  }
+  .add-photo-div {
+    width: 500px;
+  }
+  .add-num-option {
+    width: 520px;
+  }
+}
+
+@media (max-width: 768px) {
+  .post-drp-down {
+    width: 400px;
+  }
+  .des-text-area .MuiOutlinedInput-root {
+    width: 400px;
+    height: 400px;
+  }
+  .post-txt-field {
+    width: 200px;
+  }
+  .post-month-drp-down {
+    width: 200px;
+  }
+
+  .post-unit-drp-down {
+    width: 200px;
+  }
+  .title {
+    width: 400px;
+  }
+  .number {
+    width: 300px;
+  }
+  .form-container hr {
+    width: 400px;
+  }
+  .add-photo-div {
+    width: 400px;
+  }
+  .add-number {
+    width: 300px;
+  }
+
+  .add-num-option {
+    width: 400px;
+  }
+}
+
+@media (max-width: 540px) {
+  .post-drp-down {
+    width: 300px;
+  }
+  .des-text-area .MuiOutlinedInput-root {
+    width: 300px;
+    height: 300px;
+  }
+  .post-txt-field {
+    width: 150px;
+  }
+  .post-month-drp-down {
+    width: 150px;
+  }
+
+  .post-unit-drp-down {
+    width: 150px;
+  }
+  .title {
+    width: 300px;
+  }
+  .number {
+    width: 200px;
+  }
+  .form-container hr {
+    width: 300px;
+  }
+  .add-photo-div {
+    width: 300px;
+  }
+  .add-number {
+    width: 220px;
+  }
+
+  .add-num-option {
+    width: 340px;
+  }
+}
+
+@media (max-width: 480px) {
+  .post-drp-down {
+    width: 300px;
+  }
+  .des-text-area .MuiOutlinedInput-root {
+    width: 300px;
+    height: 300px;
+  }
+  .post-txt-field {
+    width: 150px;
+  }
+  .post-month-drp-down {
+    width: 150px;
+  }
+
+  .post-unit-drp-down {
+    width: 150px;
+  }
+  .title {
+    width: 300px;
+  }
+  .number {
+    width: 200px;
+  }
+  .form-container hr {
+    width: 300px;
+  }
+  .add-photo-div {
+    width: 300px;
+  }
+  .add-number {
+    width: 200px;
+  }
+  .add-num-option {
+    width: 340px;
+  }
+}
+
+@media (max-width: 380px) {
+  .post-drp-down {
+    width: 300px;
+  }
+  .des-text-area .MuiOutlinedInput-root {
+    width: 300px;
+    height: 300px;
+  }
+  .post-txt-field {
+    width: 150px;
+  }
+  .post-month-drp-down {
+    width: 150px;
+  }
+
+  .post-unit-drp-down {
+    width: 150px;
+  }
+  .title {
+    width: 300px;
+  }
+  .add-number {
+    width: 200px;
+  }
+  .form-container hr {
+    width: 300px;
+  }
+  .add-photo-div {
+    width: 300px;
+  }
+  .add-num-option {
+    width: 340px;
+  }
+}

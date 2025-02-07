@@ -1,0 +1,449 @@
+.membership-container{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+    padding: 50px ;
+   
+}
+
+.membership-left{
+    width: 50%;
+}
+
+.membership-right{
+    width: 50%;
+}
+
+.membership-sub-div{
+     padding: 20px 80px 20px 80px;
+     margin-bottom: 30px;
+}
+
+.div-single-card {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    background-color: #F8F8FF;
+    padding: 10px 10px 10px 30px;
+    align-items: center;
+    border-radius: 10px; /* Add rounded corners for better aesthetics */
+    transition: transform 0.3s ease; /* Add hover effect */
+  }
+  
+  .div-single-card:hover {
+    transform: scale(1.05); /* Slightly scale on hover for a better user experience */
+  }
+
+  .plan-main-div{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 50px;
+  }
+
+  .plan-div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+    padding: 20px 100px 20px 100px;
+    background-color: #F8F8FF;
+  }
+
+  .plan-div hr{
+    width: 100%;
+    border-color: #196CDF;
+    opacity: 0.4;
+  }
+
+  .simple-form{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+   padding-left: 100px;
+  }
+
+  .member-txt-field{
+    width: 400px;
+}
+
+.member-txt-field .MuiOutlinedInput-root {
+    border-radius: 50px;
+    margin-bottom: 20px;
+    background-color: #ffffff;
+    height:40px
+}
+
+.advantage-main-div{
+  display: flex;
+  gap: 10px;
+  margin-bottom: 50px;
+}
+
+.advantage-div{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap:50px;
+  background-color: #F8F8FF;
+  padding: 30px;
+  width:300px;
+}
+
+  @media(max-width: 1024px){
+    .membership-container{
+      margin-top: 10px;
+        gap: 30px;
+        padding: 20px;
+        margin-bottom: 30px;
+    }
+
+    .membership-container p{
+        font-size: 12px;
+    }
+
+    .membership-left{
+        width: 40%;
+    
+    }
+     .membership-left h1{
+        font-size: 20px;
+     }
+
+    .membership-right{
+        width: 60%;
+    }
+
+    .member-img{
+        width: 100%;
+    }
+
+    .membership-sub-div{
+        padding: 20px
+   }
+    .div-single-card {
+        padding: 5px; /* Further reduce padding */
+      }
+    
+      .div-single-card img {
+        width: 25px;
+        height: 25px; /* Smaller images for mobile */
+      }
+    
+      .div-single-card p {
+        font-size: 12px; /* Smaller text for mobile */
+      }
+
+      .plan-div{
+        width: 95%;
+        padding: 10px;
+      }
+
+      .simple-form{
+        flex-direction: column;
+        align-items: center;
+        padding-left: 0px;
+    
+      }
+
+      .member-txt-field .MuiOutlinedInput-root {
+       width: 400px;
+    }
+
+
+    .advantage-div{
+      width:85%;
+    }
+}
+
+  @media(max-width: 768px){
+    .membership-container{
+        margin-top: 10px;
+        gap: 30px;
+        padding: 20px;
+        margin-bottom: 30px;
+    }
+
+    .membership-container p{
+        font-size: 12px;
+    }
+
+    .membership-left{
+        width: 40%;
+    
+    }
+     .membership-left h1{
+        font-size: 20px;
+     }
+
+    .membership-right{
+        width: 60%;
+    }
+
+    .member-img{
+        width: 100%;
+    }
+
+    .membership-sub-div{
+        padding: 20px
+   }
+    .div-single-card {
+        padding: 5px; /* Further reduce padding */
+      }
+    
+      .div-single-card img {
+        width: 25px;
+        height: 25px; /* Smaller images for mobile */
+      }
+    
+      .div-single-card p {
+        font-size: 12px; /* Smaller text for mobile */
+      }
+
+      .plan-div{
+        width: 95%;
+        padding: 10px;
+      }
+      .simple-form{
+        flex-direction: column;
+        align-items: center;
+        padding-left: 0px;
+    
+      }
+
+      .member-txt-field .MuiOutlinedInput-root {
+       width: 400px;
+    }
+
+
+    .advantage-div{
+      width:85%;
+    }
+}
+
+@media(max-width: 540px){
+    .membership-container{
+      margin-top: 10px;
+        gap: 30px;
+        padding: 20px;
+        margin-bottom: 30px;
+    }
+
+    .membership-container p{
+        font-size: 12px;
+    }
+
+    .membership-left{
+        width: 50%;
+    
+    }
+     .membership-left h1{
+        font-size: 20px;
+     }
+
+    .membership-right{
+        width: 50%;
+    }
+
+    .member-img{
+        width: 100%;
+    }
+
+    .membership-sub-div{
+        padding: 20px
+   }
+    .div-single-card {
+        padding: 5px; /* Further reduce padding */
+      }
+    
+      .div-single-card img {
+        width: 25px;
+        height: 25px; /* Smaller images for mobile */
+      }
+    
+      .div-single-card p {
+        font-size: 12px; /* Smaller text for mobile */
+      }
+
+      
+      .plan-main-div{
+        flex-direction: column;
+      }
+
+      .plan-div{
+        width: 95%;
+        padding: 10px;
+      }
+
+      .simple-form{
+        display: flex;
+        flex-direction: column; 
+      }
+
+      .member-txt-field .MuiOutlinedInput-root {
+       width: 85%;
+    }
+
+    .advantage-main-div{
+      flex-direction: column;
+    }
+
+    .advantage-div{
+      width:85%;
+    }
+}
+
+@media(max-width: 480px){
+    .membership-container{
+        flex-direction: column;
+        gap: 30px;
+        padding: 10px;
+        margin-bottom: 30px;
+    }
+
+    .membership-container p{
+        font-size: 12px;
+    }
+
+    .membership-left{
+        width: 100%;
+    
+    }
+     .membership-left h1{
+        font-size: 20px;
+     }
+
+    .membership-right{
+        width: 100%;
+    }
+
+    .member-img{
+        width: 100%;
+    }
+
+    .membership-sub-div{
+        padding: 20px
+   }
+    .div-single-card {
+        padding: 5px; /* Further reduce padding */
+      }
+    
+      .div-single-card img {
+        width: 25px;
+        height: 25px; /* Smaller images for mobile */
+      }
+    
+      .div-single-card p {
+        font-size: 12px; /* Smaller text for mobile */
+      }
+
+      .plan-main-div{
+        flex-direction: column;
+      }
+
+      .plan-div{
+        width: 95%;
+        padding: 10px;
+      }
+
+      .simple-form{
+        display: flex;
+        width: 100%;
+        flex-direction: column; 
+        justify-content: center;
+        padding-left: 30px;
+      }
+
+      .member-txt-field .MuiOutlinedInput-root {
+       width: 85%;
+    }
+
+    .advantage-main-div{
+      flex-direction: column;
+    }
+
+    .advantage-div{
+      width:85%;
+    }
+}
+
+
+@media(max-width: 380px){
+    .membership-container{
+        flex-direction: column;
+        gap: 30px;
+        padding: 10px;
+        margin-bottom: 30px;
+    }
+
+    .membership-container p{
+        font-size: 12px;
+    }
+
+    .membership-left{
+        width: 100%;
+    
+    }
+     .membership-left h1{
+        font-size: 20px;
+     }
+    
+    .membership-right{
+        width: 100%;
+    }
+
+    .member-img{
+        width: 100%;
+    }
+
+    .membership-sub-div{
+        padding: 20px
+   }
+    .div-single-card {
+        padding: 5px; /* Further reduce padding */
+      }
+    
+      .div-single-card img {
+        width: 25px;
+        height: 25px; /* Smaller images for mobile */
+      }
+    
+      .div-single-card p {
+        font-size: 12px; /* Smaller text for mobile */
+      }
+
+      .plan-main-div{
+        flex-direction: column;
+      }
+
+      .plan-div{
+        width: 95%;
+        padding: 10px;
+      }
+
+      .simple-form{
+        display: flex;
+        flex-direction: column; 
+        justify-content: center;
+        padding-left: 60px;
+      }
+
+      .member-txt-field .MuiOutlinedInput-root {
+       width: 70%;
+    }
+
+    .advantage-main-div{
+      flex-direction: column;
+    }
+
+    .advantage-div{
+      width:85%;
+    }
+
+
+    
+}
+

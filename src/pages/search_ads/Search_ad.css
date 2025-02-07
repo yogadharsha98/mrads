@@ -1,0 +1,282 @@
+.container{
+    display: flex;
+    flex-direction: row;
+    gap:30px;
+    padding: 30px
+}
+
+.left-side{
+    width:20%;
+    height:auto;
+    background-color: #f8f8ff;
+    padding: 40px ;
+    border-radius: 10px;
+}
+
+
+.right-side{
+    width:75%;
+}
+
+.sub-right-side{
+    height:max-content;
+    background-color: #f8f8ff;
+    padding: 20px 90px 20px 90px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+}
+
+.single-container1{
+    background-color: #FFF2E4;
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+    gap:20px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+     cursor: pointer;
+}
+
+.single-container2{
+    background-color: #f8f8ff;
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+    gap:20px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+     cursor: pointer;
+}
+.p-tag-location{
+    margin-top: 0px;
+    font-size: 13px;
+}
+.justnow{
+    font-size: 10px;
+}
+.select-drp-down{
+    width: 100%;
+}
+
+.select-drp-down.MuiOutlinedInput-root {
+    border-radius: 50px;
+    padding-right: 60px;
+    margin-bottom: 10px;
+    background-color: #ffffff;
+    height:40px
+  }
+
+.cat-div{
+    width: 50%;
+    height:auto;
+    display: flex;
+    gap: 30px;
+    align-items: center;
+    cursor: pointer;
+}
+
+.sub-cat-div{
+    margin-left:60px
+}
+
+.sub-cat-div p {
+    cursor: pointer;
+}
+
+.img-categories{
+    width: 30px;
+    height:auto
+}
+
+.mobile-div{
+    display: none;
+}
+
+
+
+ @media (max-width: 1024px) {
+    
+}
+
+@media (max-width: 1300px) {
+
+}
+    
+  
+  @media (max-width: 768px) {
+  
+  
+  }
+  
+  @media (max-width: 540px){
+     
+    .container{
+        display: flex;
+        flex-direction: column;
+    }
+    
+   .left-side{
+    display: none;
+   }
+
+    .right-side{
+        width: 100%;
+    }
+
+    .single-container1, .single-container2{
+        font-size: 9px;
+        padding: 10px;
+    }
+    .p-tag-location{
+        margin-top: 0px;
+        font-size: 8px;
+    }
+    .justnow{
+        font-size: 8px;
+    }
+    .img-container{
+        width: 80px;
+        height:80px
+    }
+    .verify-img, .layer-img{
+        width: 5px,
+        
+    }
+   
+    .sub-right-side{
+    display: none;
+    }
+
+     .mobile-div{
+        margin-top: 0;
+      
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        background-color: #f8f8ff;
+        justify-content: space-between;
+        
+    }
+    .mobile-sub-div{
+        display: flex;
+        gap: 10px;
+        margin: 0;
+        padding: 10px 30px 10px 30px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .container{
+        display: flex;
+        flex-direction: column;
+    }
+    
+   .left-side{
+    display: none;
+   }
+
+    .right-side{
+        width: 100%;
+    }
+
+    .single-container1, .single-container2{
+        font-size: 9px;
+        padding: 10px;
+    }
+    .p-tag-location{
+        margin-top: 0px;
+        font-size: 8px;
+    }
+    .justnow{
+        font-size: 8px;
+    }
+    .img-container{
+        width: 80px;
+        height:80px
+    }
+    .verify-img, .layer-img{
+        width: 5px,
+        
+    }
+   
+    .sub-right-side{
+    display: none;
+    }
+
+     .mobile-div{
+        margin-top: 0;
+      
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        background-color: #f8f8ff;
+        justify-content: space-between;
+        
+    }
+    .mobile-sub-div{
+        display: flex;
+        gap: 10px;
+        margin: 0;
+        padding: 10px 20px 10px 20px;
+    }
+  }
+  
+  @media (max-width: 380px) {
+    /* For extra-small screens (portrait phones) */
+    .container{
+        display: flex;
+        flex-direction: column;
+    }
+    
+   .left-side{
+    display: none;
+   }
+
+    .right-side{
+        width: 100%;
+    }
+
+    .single-container1, .single-container2{
+        font-size: 9px;
+        padding: 10px;
+    }
+    .p-tag-location{
+        margin-top: 0px;
+        font-size: 8px;
+    }
+    .justnow{
+        font-size: 8px;
+    }
+    .img-container{
+        width: 80px;
+        height:80px
+    }
+    .verify-img, .layer-img{
+        width: 5px,
+        
+    }
+   
+    .sub-right-side{
+    display: none;
+    }
+
+     .mobile-div{
+        margin-top: 0;
+      
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        background-color: #f8f8ff;
+        justify-content: space-between;
+        
+    }
+    .mobile-sub-div{
+        display: flex;
+        gap: 10px;
+        margin: 0;
+        padding: 10px 20px 10px 20px;
+    }
+    
+  }
+  
+  

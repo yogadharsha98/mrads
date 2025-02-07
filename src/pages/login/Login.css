@@ -1,0 +1,102 @@
+.phone-number {
+  width: 100% !important; /* Ensures full width inside its container */
+  max-width: 320px; /* Adjust based on container width */
+}
+
+.phone-number .MuiOutlinedInput-root {
+  border-radius: 50px !important;
+  padding: 0 60px 0 10px !important;
+  height: 40px !important;
+  background-color: white !important; /* Ensure white background */
+  margin-bottom: 20px;
+  font-size: 13px;
+}
+
+.phone-number .MuiOutlinedInput-input {
+  padding: 20px !important;
+}
+
+/* Remove blue shadow on focus */
+.phone-number .MuiOutlinedInput-root.Mui-focused {
+  box-shadow: none !important;
+  border-color: #ff9d3d !important; /* Optional: Match button color */
+}
+
+/* Remove autofill background (Chrome) */
+.phone-number input:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0px 1000px white inset !important;
+  box-shadow: 0 0 0px 1000px white inset !important;
+}
+
+.login-container {
+  margin-top: 60px;
+  margin-bottom: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.login-div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn-group {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 10px;
+  width: 100%;
+}
+
+.social {
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Centers the content horizontally */
+  text-align: center;
+  gap: 10px; /* Adds spacing between the icon and the text */
+  padding: 10px 20px; /* Adjust padding for better button appearance */
+  font-size: 16px; /* Ensure consistent text size */
+  font-weight: 500; /* Optional: For slightly bold text */
+  border: none;
+  border-radius: 5px; /* Optional: Rounded corners */
+  cursor: pointer;
+  background-color: #f0f0f0; /* Light gray background for better visibility */
+  color: #333; /* Dark text color */
+  transition: background-color 0.3s ease; /* Smooth hover effect */
+}
+
+.social:hover {
+  background-color: #e0e0e0; /* Slightly darker background on hover */
+}
+
+.social svg {
+  font-size: 25px; /* Ensures icons are properly sized */
+}
+
+.hr-with-or {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin: 20px 0;
+}
+
+.hr-with-or hr {
+  width: 40%;
+  margin: 0;
+}
+
+.hr-with-or span {
+  margin: 0 10px;
+  font-weight: bold;
+}
+
+a {
+  text-decoration: none;
+  color: #ff9d3d;
+}

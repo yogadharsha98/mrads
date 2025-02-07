@@ -1,0 +1,89 @@
+.txt-field {
+  width: 300px;
+}
+
+.txt-field .MuiOutlinedInput-root {
+  border-radius: 50px !important;
+  padding: 0 60px 0 10px !important;
+  height: 40px !important;
+  background-color: white !important; /* Ensure white background */
+  margin-bottom: 20px;
+  font-size: 13px;
+}
+
+.txt-field .MuiOutlinedInput-input {
+  padding: 10px !important;
+}
+
+/* Remove blue shadow on focus */
+.txt-field .MuiOutlinedInput-root.Mui-focused {
+  box-shadow: none !important;
+  border-color: #ff9d3d !important; /* Optional: Match button color */
+}
+
+/* Remove autofill background (Chrome) */
+.txt-field input:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0px 1000px white inset !important;
+  box-shadow: 0 0 0px 1000px white inset !important;
+}
+.login-container {
+  width: 100%;
+  margin-top: 60px;
+  margin-bottom: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.login-div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn-group {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+}
+
+.social {
+  width: 100%;
+  background-color: #ffffff !important;
+  color: black !important;
+  border: 2px solid #196cdf !important;
+  border-radius: 20px !important;
+  padding: 8px 30px !important;
+  text-transform: none !important;
+  display: flex;
+  align-items: center;
+}
+
+.social .MuiSvgIcon-root {
+  margin-right: 10px;
+}
+
+.hr-with-or {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin: 20px 0;
+}
+
+.hr-with-or hr {
+  width: 40%;
+  margin: 0;
+}
+
+.hr-with-or span {
+  margin: 0 10px;
+  font-weight: bold;
+}
+
+a {
+  text-decoration: none;
+  color: #ff9d3d;
+}

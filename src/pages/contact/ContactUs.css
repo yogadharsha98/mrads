@@ -1,0 +1,31 @@
+.mess-text-area  .MuiOutlinedInput-root{
+    border-radius: 20px;
+    margin-bottom: 40px;
+    background-color: #ffffff;
+    height:200px;
+    width: 500px;
+}
+
+@media(max-width: 768px){
+    .mess-text-area .MuiOutlinedInput-root{
+        width: 400px;
+    }
+}
+
+@media(max-width: 480px){
+    .mess-text-area .MuiOutlinedInput-root{
+        width: 300px;
+    }
+}
+
+@media(max-width: 540px){
+    .mess-text-area .MuiOutlinedInput-root{
+        width: 300px;
+    }
+}
+
+@media(max-width: 380px){
+    .mess-text-area .MuiOutlinedInput-root{
+        width: 300px;
+    }
+}

@@ -1,0 +1,40 @@
+.menu-icon{
+    display: none;
+}
+ 
+@media (max-width: 768px) {
+  
+
+}
+
+@media (max-width: 540px){
+    .menu-icon{
+        display: inline;
+    }
+    .mobile-login-toggle{
+        display: none;
+    }
+
+}
+@media (max-width: 480px) {
+    .menu-icon{
+        display: inline;
+    }
+    .mobile-login-toggle{
+        display: none;
+    }
+  
+}
+
+@media (max-width: 380px) {
+ 
+    .menu-icon{
+        display: inline;
+    }
+    
+    .mobile-login-toggle{
+        display: none;
+    }
+  
+}
+

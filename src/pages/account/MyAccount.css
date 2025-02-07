@@ -1,0 +1,451 @@
+.account-container{
+    display: flex;
+    gap: 20px;
+    padding: 30px 50px 30px 50px;
+    justify-content: center;
+    margin-bottom: 80px;
+}
+
+.left-account-div{
+    width: 35%;
+    
+}
+
+.right-account-div{
+    width: 60%;
+    height: max-content;
+    
+}
+
+.tab-account{
+    margin-top: 10px;
+    background-color: #F8F8FF;
+    padding: 15px 0px 15px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.tab-account:hover{
+    border: 1px solid #196CDF;
+}
+
+
+.account-field{
+    width: 400px;
+}
+
+.account-field .MuiOutlinedInput-root {
+    border-radius: 50px;
+    margin-bottom: 20px;
+    background-color: #ffffff;
+    height:40px
+}
+
+.account-drp-down{
+    width: 400px;
+}
+
+.account-drp-down.MuiOutlinedInput-root {
+    border-radius: 50px;
+    padding-right: 60px;
+    margin-bottom: 10px;
+    background-color: #ffffff;
+    height:40px
+}
+
+.account-email-field{
+    width: 400px;
+}
+
+.account-email-field .MuiOutlinedInput-root {
+    border-radius: 50px;
+    margin-bottom: 20px;
+    background-color: #ffffff;
+    height:40px
+}
+
+.ad-main-container{
+    background-color: #F8F8FF;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+.ad-container{
+    display: flex;
+    flex-direction: row;
+    gap:20px;
+}
+
+
+.btn-delete {
+    background-color: #ff3d3d !important;
+    color: white !important;
+    border-radius: 20px !important;
+    padding: 8px 30px !important;
+    text-transform: none !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;
+  }
+  
+  .btn-delete:hover{
+    background-color: #d00404 !important;
+    color: white !important;
+  }
+.edit-delete-div{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.acc-number{
+    width: 400px;
+}
+
+.acc-number .MuiOutlinedInput-root {
+    border-radius: 50px;
+    margin-bottom: 20px;
+    background-color: #ffffff;
+    height:40px
+}
+
+.acc-number-option{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.acc-num-option{
+    display: flex;
+    justify-content: start;
+    width: 520px;
+    gap: 20px;
+    
+}
+
+ .single-tab{
+    display: flex;
+    flex-direction: column;
+}
+.single-tab-main{
+    display: flex;
+    flex-direction: row;
+}
+
+@media(max-width: 1300px){
+    .account-container{
+        padding: 10px;
+        margin-top: 20px;
+        margin-bottom: 60px;
+    }
+
+    .account-field{
+        width: 350px;
+    }
+
+    .account-drp-down{
+        width: 350px;
+    }
+    
+}
+
+@media(max-width: 1024px){
+    .account-container{
+        padding: 10px;
+        margin-top: 20px;
+        margin-bottom: 60px;
+    }
+    .account-field{
+        width: 100%;
+    }
+
+    .account-drp-down{
+        width: 200px;
+    }
+    .ad-main-container{
+        font-size: 9px;
+        padding: 10px;
+    }
+    .p-tag-location{
+        margin-top: 0px;
+        font-size: 8px;
+    }
+    .justnow{
+        font-size: 8px;
+    }
+    .ad-img-container{
+        width: 80px;
+        height:80px
+    }
+    .layer-img{
+        width: 5px,
+        
+    }
+    .btn-delete {
+        padding:  6px 15px  !important;
+        font-size: 12px !important;
+    }
+    .edit-delete-div{
+        flex-direction: column;
+    }
+    .single-tab h3{
+        font-size: 15px;
+    }
+    .single-tab-main{
+        flex-direction: column;
+        margin-left: 30px;
+    }
+    .single-tab-main hr{
+        display: none;
+    }
+
+}
+
+@media(max-width: 768px){
+    .account-container{
+        padding: 20px;
+        margin-top: 20px;
+        margin-bottom: 60px;
+    }
+    
+    .left-account-div{
+        width: 60%;
+    }
+    .account-field{
+        width: 100%;
+    }
+    .ad-main-container{
+        font-size: 9px;
+        padding: 10px;
+    }
+    .p-tag-location{
+        margin-top: 0px;
+        font-size: 8px;
+    }
+    .justnow{
+        font-size: 8px;
+    }
+    .ad-img-container{
+        width: 80px;
+        height:80px
+    }
+    .layer-img{
+        width: 5px,
+        
+    }
+    .btn-delete {
+        padding:  6px 15px  !important;
+    font-size: 12px !important;
+    }
+    .edit-delete-div{
+        flex-direction: column;
+    }
+    .single-tab h3{
+        font-size: 15px;
+    }
+    .single-tab-main{
+        flex-direction: column;
+        margin-left: 30px;
+    }
+    .single-tab-main hr{
+        display: none;
+    }
+}
+
+@media(max-width: 540px){
+    .account-container{
+        padding: 20px;
+        margin-top: 20px;
+        margin-bottom: 30px;
+        flex-direction: column;
+    }
+    .right-account-div{
+        margin-top: 10px;
+        width: 100%;
+    }
+    .left-account-div{
+        width: 100%;
+    }
+    .account-field{
+        width: 100%;
+    }
+    .account-drp-down{
+        width: 170px;
+    }
+    .account-email-field{
+        width: 100%;
+    }
+    .number{
+        width: 500px;
+    }
+    
+    .number .MuiOutlinedInput-root {
+        border-radius: 50px;
+        margin-bottom: 20px;
+        background-color: #ffffff;
+        height:40px
+    }
+    .ad-main-container{
+        font-size: 9px;
+        padding: 10px;
+    }
+    .p-tag-location{
+        margin-top: 0px;
+        font-size: 8px;
+    }
+    .justnow{
+        font-size: 8px;
+    }
+    .ad-img-container{
+        width: 80px;
+        height:80px
+    }
+    .layer-img{
+        width: 5px,
+        
+    }
+    .btn-delete {
+        padding:  6px 15px  !important;
+    font-size: 12px !important;
+    }
+    .edit-delete-div{
+        flex-direction: column;
+    }
+    .single-tab h3{
+        font-size: 15px;
+    }
+    .single-tab-main{
+        flex-direction: column;
+        margin-left: 30px;
+    }
+    .single-tab-main hr{
+        display: none;
+    }
+}
+
+@media(max-width: 480px){
+    .account-container{
+        padding: 20px;
+        margin-top: 20px;
+        margin-bottom: 30px;
+        flex-direction: column;
+    }
+    .right-account-div{
+        width: 100%;
+    }
+    .left-account-div{
+        width: 100%;
+    }
+    .account-field{
+        width: 100%;
+    }
+    .account-drp-down{
+        width: 170px;
+    }
+    .account-email-field{
+        width: 100%;
+    }
+    .ad-main-container{
+        font-size: 9px;
+        padding: 10px;
+    }
+    .p-tag-location{
+        margin-top: 0px;
+        font-size: 8px;
+    }
+    .justnow{
+        font-size: 8px;
+    }
+    .ad-img-container{
+        width: 80px;
+        height:80px
+    }
+    .layer-img{
+        width: 5px,
+        
+    }
+    .btn-delete {
+        padding:  6px 15px  !important;
+        font-size: 12px !important;
+    }
+    .edit-delete-div{
+        flex-direction: column;
+    }
+    .single-tab h3{
+        font-size: 15px;
+    }
+    .single-tab-main{
+        flex-direction: column;
+        margin-left: 50px;
+    }
+    .single-tab-main hr{
+        display: none;
+    }
+}
+
+@media(max-width: 380px){
+    .account-container{
+        padding: 20px;
+        margin-top: 10px;
+        margin-bottom: 30px;
+        flex-direction: column;
+    }
+    .right-account-div{
+        width: 100%;
+    }
+    .left-account-div{
+        width: 100%;
+    }
+    .account-field{
+        width: 100%;
+    }
+    .account-drp-down{
+        width: 150px;
+    }
+    .account-email-field{
+        width: 100%;
+    }
+    .ad-main-container{
+        font-size: 9px;
+        padding: 10px;
+    }
+    .p-tag-location{
+        margin-top: 0px;
+        font-size: 8px;
+    }
+    .justnow{
+        font-size: 8px;
+    }
+    .ad-img-container{
+        width: 80px;
+        height:80px
+    }
+    .layer-img{
+        width: 5px,
+        
+    }
+    .btn-delete {
+        
+        padding: 6px 12px 6px 12px!important;
+        font-size: 10px !important;
+    }
+    .edit-delete-div{
+        flex-direction: column;
+    }
+    .single-tab h3{
+        font-size: 15px;
+    }
+    .single-tab-main{
+        flex-direction: column;
+        margin-left: 50px;
+    }
+    .single-tab-main hr{
+        display: none;
+    }
+    .acc-number-option{
+        gap: 10px;
+    }
+}

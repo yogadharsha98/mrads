@@ -1,0 +1,80 @@
+/* post add */
+.post-ad-container {
+  height: auto;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+
+.post-grid-main {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.post-ad-div {
+  display: flex;
+  gap: 5px;
+  margin: 20px;
+  padding: 30px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: max-content;
+  height: 100;
+  background-color: #f8f8ff;
+}
+
+.post-ad-div h3 {
+  color: #196cdf;
+  font-size: 20px;
+}
+
+.post-ad-div p {
+  text-align: center;
+}
+
+@media (max-width: 1200px) {
+  /* For medium screens (tablets or smaller desktops) */
+  .post-ad-div {
+    width: fit-content;
+  }
+}
+
+@media (max-width: 768px) {
+  /* For small screens (landscape phones or small tablets) */
+
+  .post-ad-div {
+    width: fit-content;
+  }
+}
+
+@media (max-width: 600px) {
+  /* For extra-small screens (portrait phones) */
+  .post-ad-div {
+    padding: 20px;
+    width: fit-content;
+  }
+}
+
+@media (max-width: 480px) {
+  /* For extra-small screens (portrait phones) */
+  .post-ad-div {
+    padding: 20px;
+    width: fit-content;
+  }
+}
+
+@media (max-width: 380px) {
+  /* For extra-small screens (portrait phones) */
+  .post-ad-div {
+    padding: 20px;
+    width: fit-content;
+  }
+}

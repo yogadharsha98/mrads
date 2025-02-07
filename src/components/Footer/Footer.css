@@ -1,0 +1,136 @@
+.footer-container {
+  padding: 20px;
+  width: 100%;
+  height: auto;
+  background-color: #196cdf;
+  box-sizing: border-box;
+}
+
+.footer-container h1,
+.footer-container h2 {
+  display: flex;
+  justify-content: center;
+  color: white;
+  text-align: center;
+}
+
+.footer-div {
+  width: 100%;
+  padding: 30px;
+  display: flex;
+  flex-wrap: wrap; /* Enables wrapping on smaller screens */
+  justify-content: space-between;
+  color: white;
+  box-sizing: border-box;
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 10px;
+  width: 22%; /* Default width for large screens */
+  box-sizing: border-box; /* Includes padding in width */
+}
+
+.footer-content h3 {
+  margin-bottom: 10px;
+}
+
+.footer-content a {
+  text-decoration: none;
+  color: #ffffffec; /* White color with opacity */
+  font-size: 16px; /* Default font size */
+}
+
+.footer-content a:hover {
+  color: #ffa500; /* Optional hover effect */
+}
+
+.download-app{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+.download-app img {
+  width: 130px; /* Default size */
+  height: auto;
+  cursor: pointer;
+}
+/* Responsive Styles */
+
+/* Medium Screens (Tablets) */
+@media (max-width: 1024px) {
+  .footer-content {
+    width: 45%; /* Two columns layout for medium screens */
+    margin-bottom: 20px;
+  }
+}
+
+/* Small Screens (Phones) */
+@media (max-width: 768px) {
+  .footer-div {
+    flex-direction: column; /* Stack items vertically */
+    justify-content: center;
+    align-items: center;
+  }
+
+  .footer-content {
+    width: 90%; /* Full width for small screens */
+    margin-bottom: 20px;
+    align-items: center; /* Center-align for smaller screens */
+    text-align: center; /* Center-align text */
+  }
+
+  .footer-content a {
+    font-size: 14px; /* Reduce font size for smaller screens */
+  }
+
+  .footer-content h3 {
+    font-size: 18px; /* Slightly smaller headings */
+  }
+}
+
+/* Very Small Screens (Extra Small Devices) */
+@media (max-width: 480px) {
+  .footer-container {
+    padding: 10px;
+  }
+
+  .footer-div {
+    flex-direction: column; /* Stack all content vertically */
+    justify-content: center;
+    align-items: center; /* Center align content */
+  }
+
+  .footer-content {
+    width: 100%; /* Full width for extra small screens */
+    margin-bottom: 15px;
+  }
+
+  .footer-content a {
+    font-size: 12px; /* Reduce font size further */
+  }
+
+  .footer-content h3 {
+    font-size: 16px; /* Further reduce heading size */
+  }
+
+  .footer-container h1,
+  .footer-container h2 {
+    font-size: 18px; /* Smaller main headings */
+  }
+  .download-app{
+    flex-direction: row;
+    gap: 5px;
+
+  }
+
+  .download-app img {
+    width: 90px; /* Adjust width for smaller screens */
+    height: 90px;
+  }
+ 
+}

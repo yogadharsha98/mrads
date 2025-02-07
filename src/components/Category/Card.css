@@ -1,0 +1,117 @@
+.singlecard-container{
+    width: 200px;
+     height: 200px;
+     background-color: #F8F8FF ;
+     transition: transform 0.3s ease;
+}
+
+.singlecard-container:hover{
+    cursor: pointer;
+    background-color: #f2f2ff;
+    transform: scale(1.05);
+}
+.card-content{
+    width: 200px;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    align-Items: center;
+    justify-Content: center;
+    gap: 5px;
+   
+}
+.card-img{
+    width: 50px;
+    height: 50px;
+}
+
+  
+@media (max-width: 1300px) {
+    /* For medium screens (tablets or smaller desktops) */
+    .singlecard-container {
+        width: 180px;
+      }
+      .card-content{
+          width: 180px;
+          height: 180px;
+      }
+      .card-img{
+          width: 50px;
+          height: 50px;
+      }
+    }
+
+@media (max-width: 1200px) {
+    /* For medium screens (tablets or smaller desktops) */
+    .singlecard-container {
+      width: 200px;
+    }
+    .card-content{
+        width: 200px;
+        height: 200px;
+    }
+    .card-img{
+        width: 50px;
+        height: 50px;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    /* For small screens (landscape phones or small tablets) */
+    .singlecard-container {
+        width: 200px;
+      }
+      .card-content{
+          width: 202px;
+          height: 200px;
+      }
+      .card-img{
+          width: 50px;
+          height: 50px;
+      }
+  }
+
+  @media (max-width: 540px) {
+    /* For extra-small screens (portrait phones) */
+    .singlecard-container {
+        width: 230px;
+      }
+      .card-content{
+          width: 230px;
+          height: 200px;
+      }
+      .card-img{
+          width: 50px;
+          height: 50px;
+      }
+  }
+  
+  @media (max-width: 480px) {
+    /* For extra-small screens (portrait phones) */
+    .singlecard-container {
+        width: 160px;
+      }
+      .card-content{
+          width: 160px;
+          height: 200px;
+      }
+      .card-img{
+          width: 50px;
+          height: 50px;
+      }
+  }
+
+  @media (max-width: 360px) {
+    /* For extra-small screens (portrait phones) */
+    .singlecard-container {
+        width: 150px;
+      }
+      .card-content{
+          width: 150px;
+          height: 200px;
+      }
+      .card-img{
+          width: 50px;
+          height: 50px;
+      }
+  }
