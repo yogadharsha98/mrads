@@ -146,6 +146,23 @@ const PostAdRent = () => {
           [fieldId]: existingValues.filter((v) => v !== value),
         };
       } else {
+        // Special case for "Land size" field to include unit
+        if (fieldId === 13) {
+          return {
+            ...prev,
+            [fieldId]: value,
+            land_size_unit: prev.land_size_unit || 'Perches', // Default to "Perches" if not set
+          };
+        }
+
+        // Special case for "Land size" unit change
+        if (fieldId === 'land_size_unit') {
+          return {
+            ...prev,
+            land_size_unit: value,
+          };
+        }
+
         // Handle other inputs (text, select, radio)
         return { ...prev, [fieldId]: value };
       }
@@ -292,7 +309,7 @@ const PostAdRent = () => {
                     required
                     value={selectedFields[field.id] || ''}
                     onChange={(e) =>
-                      handleFieldChange(field.id, e.target.value)
+                      handleFieldChange(field.id, field.name, e.target.value)
                     }
                     className="post-drp-down"
                     displayEmpty
@@ -318,13 +335,17 @@ const PostAdRent = () => {
                     }}
                   >
                     <TextField
+                      type={field.name === 'Land size' ? 'number' : 'text'}
                       required
                       value={selectedFields[field.id] || ''}
                       onChange={(e) =>
                         handleFieldChange(field.id, e.target.value)
                       }
-                      className="title"
-                      style={{ flex: 1 }}
+                      className={
+                        field.name === 'Land size'
+                          ? 'land-size-txt-field'
+                          : 'title'
+                      }
                     />
                     {field.name === 'Land size' && (
                       <Select
@@ -333,8 +354,12 @@ const PostAdRent = () => {
                         onChange={(e) =>
                           handleFieldChange('land_size_unit', e.target.value)
                         }
-                        className="unit-dropdown"
-                        style={{ width: '100px' }}
+                        className="land-size-drp-down"
+                        style={{
+                          height: '40px', // Ensures the same height as the text field
+                          display: 'flex',
+                          alignItems: 'center',
+                        }}
                       >
                         <MenuItem value="Perches">Perches</MenuItem>
                         <MenuItem value="Acres">Acres</MenuItem>

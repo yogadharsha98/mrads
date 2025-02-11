@@ -207,6 +207,45 @@
   width: 500px;
 }
 
+.land-size-txt-field {
+  width: 300px;
+}
+
+.land-size-txt-field .MuiOutlinedInput-root {
+  border-radius: 50px !important;
+  height: 40px !important;
+  background-color: white !important;
+  margin-bottom: 0px; /* Removed extra margin */
+  font-size: 15px;
+}
+
+.land-size-txt-field .MuiOutlinedInput-input {
+  padding: 10px 15px !important; /* Adjusted padding */
+}
+
+/* Remove blue shadow on focus */
+.land-size-txt-field .MuiOutlinedInput-root.Mui-focused {
+  box-shadow: none !important;
+  border-color: #ff9d3d !important;
+}
+
+/* Remove autofill background (Chrome) */
+.land-size-txt-field input:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0px 1000px white inset !important;
+  box-shadow: 0 0 0px 1000px white inset !important;
+}
+
+.land-size-drp-down {
+  width: 180px;
+  height: 40px !important; /* Ensure same height as input */
+  border-radius: 50px !important;
+  background-color: #ffffff !important;
+  font-size: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 @media (max-width: 1024px) {
   .post-drp-down {
     width: 500px;
@@ -280,6 +319,12 @@
   .add-num-option {
     width: 400px;
   }
+  .land-size-txt-field {
+    width: 200px;
+  }
+  .land-size-drp-down {
+    width: 180px;
+  }
 }
 
 @media (max-width: 540px) {
@@ -319,6 +364,12 @@
   .add-num-option {
     width: 340px;
   }
+  .land-size-txt-field {
+    width: 180px;
+  }
+  .land-size-drp-down {
+    width: 100px;
+  }
 }
 
 @media (max-width: 480px) {
@@ -357,6 +408,12 @@
   .add-num-option {
     width: 340px;
   }
+  .land-size-txt-field {
+    width: 180px;
+  }
+  .land-size-drp-down {
+    width: 100px;
+  }
 }
 
 @media (max-width: 380px) {
@@ -391,5 +448,11 @@
   }
   .add-num-option {
     width: 340px;
+  }
+  .land-size-txt-field {
+    width: 180px;
+  }
+  .land-size-drp-down {
+    width: 100px;
   }
 }
