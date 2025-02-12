@@ -64,6 +64,25 @@ const PostAdRent = () => {
     return true;
   };
 
+  const clearFields = () => {
+    setSelectedCategory('');
+    setSelectedSubCategory('');
+    setSelectedFields('');
+    setSelectedDistrict('');
+    setSelectedCity('');
+    setCities('');
+    setTitleInput('');
+    setDescription('');
+    setPrice('');
+    setPriceUnit('');
+    setContactName('');
+    setWhatsappNumber('');
+    setTermsAccepted(false);
+    setImages([]);
+    setNumbers([]);
+    setInputNumber([]);
+  };
+
   const handleSubmit = async () => {
     if (validateForm()) {
       const postRentAd = {
@@ -90,6 +109,7 @@ const PostAdRent = () => {
         const response = await dispatch(createPostRentAd(postRentAd));
         console.log('Response:', response);
         toast.success('Ad posted successfully');
+        clearFields();
       } catch (error) {
         console.error('Error posting ad:', error);
         toast.error('Failed to post. Please try again.');
@@ -196,10 +216,6 @@ const PostAdRent = () => {
     : [];
 
   useEffect(() => {
-    dispatch(getFieldOptions({ categoryId: 1, subCategoryId: 4, fieldId: 5 }));
-  }, [dispatch]);
-
-  useEffect(() => {
     dispatch(fetchCategories());
     dispatch(fetchLocations());
   }, [dispatch]);
@@ -296,130 +312,149 @@ const PostAdRent = () => {
             </div>
           )}
 
-          {fields && fields.length > 0 ? (
-            fields.map((field) => (
-              <div key={field.id} className="form-field">
-                <strong>
-                  <p>{field.name}</p>
-                </strong>
+          {selectedSubCategory && (
+            <>
+              {fields && fields.length > 0 ? (
+                fields.map((field) => (
+                  <div key={field.id} className="form-field">
+                    <strong>
+                      <p>{field.name}</p>
+                    </strong>
 
-                {/* Render Select Dropdown */}
-                {field.type === 'select' && field.options && (
-                  <Select
-                    required
-                    value={selectedFields[field.id] || ''}
-                    onChange={(e) =>
-                      handleFieldChange(field.id, field.name, e.target.value)
-                    }
-                    className="post-drp-down"
-                    displayEmpty
-                  >
-                    <MenuItem value="" disabled>
-                      Select {field.name}
-                    </MenuItem>
-                    {field.options.map((option, index) => (
-                      <MenuItem key={index} value={option.value}>
-                        {option.value}
-                      </MenuItem>
-                    ))}
-                  </Select>
-                )}
-
-                {/* Render Text Input */}
-                {field.type === 'text' && (
-                  <div
-                    style={{
-                      display: 'flex',
-                      gap: '10px',
-                      alignItems: 'center',
-                    }}
-                  >
-                    <TextField
-                      type={field.name === 'Land size' ? 'number' : 'text'}
-                      required
-                      value={selectedFields[field.id] || ''}
-                      onChange={(e) =>
-                        handleFieldChange(field.id, e.target.value)
-                      }
-                      className={
-                        field.name === 'Land size'
-                          ? 'land-size-txt-field'
-                          : 'title'
-                      }
-                    />
-                    {field.name === 'Land size' && (
+                    {/* Render Select Dropdown */}
+                    {field.type === 'select' && field.options && (
                       <Select
                         required
-                        value={selectedFields['land_size_unit'] || 'Perches'}
+                        value={selectedFields[field.id] || ''}
                         onChange={(e) =>
-                          handleFieldChange('land_size_unit', e.target.value)
+                          handleFieldChange(
+                            field.id,
+                            field.name,
+                            e.target.value
+                          )
                         }
-                        className="land-size-drp-down"
+                        className="post-drp-down"
+                        displayEmpty
+                      >
+                        <MenuItem value="" disabled>
+                          Select {field.name}
+                        </MenuItem>
+                        {field.options.map((option, index) => (
+                          <MenuItem key={index} value={option.value}>
+                            {option.value}
+                          </MenuItem>
+                        ))}
+                      </Select>
+                    )}
+
+                    {/* Render Text Input */}
+                    {field.type === 'text' && (
+                      <div
                         style={{
-                          height: '40px', // Ensures the same height as the text field
                           display: 'flex',
+                          gap: '10px',
                           alignItems: 'center',
                         }}
                       >
-                        <MenuItem value="Perches">Perches</MenuItem>
-                        <MenuItem value="Acres">Acres</MenuItem>
-                      </Select>
-                    )}
-                  </div>
-                )}
-
-                {/* Render Checkbox Group */}
-                {/* Render Checkbox Group */}
-                {field.type === 'checkbox_multiple' && field.options && (
-                  <div className="check-box-field">
-                    {field.options.map((option) => (
-                      <label key={option.id}>
-                        <input
-                          type="checkbox"
-                          checked={
-                            selectedFields[field.id]?.includes(option.value) ||
-                            false
-                          }
-                          onChange={(e) =>
-                            handleFieldChange(
-                              field.id,
-                              option.value,
-                              e.target.checked
-                            )
-                          }
-                        />
-                        {option.value}
-                      </label>
-                    ))}
-                  </div>
-                )}
-
-                {/* Render Radio Buttons */}
-                {field.type === 'radio' && field.options && (
-                  <div className="radio-field">
-                    {field.options.map((option) => (
-                      <label key={option.id} style={{ marginRight: '10px' }}>
-                        <input
+                        <TextField
+                          type={field.name === 'Land size' ? 'number' : 'text'}
                           required
-                          type="radio"
-                          name={`radio-${field.id}`} // Unique name for each radio group
-                          value={option.value}
-                          checked={selectedFields[field.id] === option.value}
+                          value={selectedFields[field.id] || ''}
                           onChange={(e) =>
                             handleFieldChange(field.id, e.target.value)
                           }
+                          className={
+                            field.name === 'Land size'
+                              ? 'land-size-txt-field'
+                              : 'title'
+                          }
                         />
-                        {option.value}
-                      </label>
-                    ))}
+                        {field.name === 'Land size' && (
+                          <Select
+                            required
+                            value={
+                              selectedFields['land_size_unit'] || 'Perches'
+                            }
+                            onChange={(e) =>
+                              handleFieldChange(
+                                'land_size_unit',
+                                e.target.value
+                              )
+                            }
+                            className="land-size-drp-down"
+                            style={{
+                              height: '40px', // Ensures the same height as the text field
+                              display: 'flex',
+                              alignItems: 'center',
+                            }}
+                          >
+                            <MenuItem value="Perches">Perches</MenuItem>
+                            <MenuItem value="Acres">Acres</MenuItem>
+                          </Select>
+                        )}
+                      </div>
+                    )}
+
+                    {/* Render Checkbox Group */}
+                    {/* Render Checkbox Group */}
+                    {field.type === 'checkbox_multiple' && field.options && (
+                      <div className="check-box-field">
+                        {field.options.map((option) => (
+                          <label key={option.id}>
+                            <input
+                              type="checkbox"
+                              checked={
+                                selectedFields[field.id]?.includes(
+                                  option.value
+                                ) || false
+                              }
+                              onChange={(e) =>
+                                handleFieldChange(
+                                  field.id,
+                                  option.value,
+                                  e.target.checked
+                                )
+                              }
+                            />
+                            {option.value}
+                          </label>
+                        ))}
+                      </div>
+                    )}
+
+                    {/* Render Radio Buttons */}
+                    {field.type === 'radio' && field.options && (
+                      <div className="radio-field">
+                        {field.options.map((option) => (
+                          <label
+                            key={option.id}
+                            style={{ marginRight: '10px' }}
+                          >
+                            <input
+                              required
+                              type="radio"
+                              name={`radio-${field.id}`} // Unique name for each radio group
+                              value={option.value}
+                              checked={
+                                selectedFields[field.id] === option.value
+                              }
+                              onChange={(e) =>
+                                handleFieldChange(field.id, e.target.value)
+                              }
+                            />
+                            {option.value}
+                          </label>
+                        ))}
+                      </div>
+                    )}
                   </div>
-                )}
-              </div>
-            ))
-          ) : isLoading ? (
-            <p>Loading fields...</p>
-          ) : (
-            <></>
+                ))
+              ) : isLoading ? (
+                <p>Loading fields...</p>
+              ) : (
+                <></>
+              )}
+            </>
           )}
 
           <hr />

@@ -2,10 +2,18 @@ import React, { useState, useEffect } from 'react';
 import Hero from '../../components/Hero/Hero';
 import './Category.css';
 import SingleCard from '../../components/Category/SingleCard';
-import { Grid, Dialog, DialogActions, DialogContent, DialogTitle, Button } from '@mui/material';
+import {
+  Grid,
+  Dialog,
+  DialogActions,
+  DialogContent,
+  DialogTitle,
+  Button,
+} from '@mui/material';
 import { useSelector, useDispatch } from 'react-redux';
 import { fetchCategories } from '../../redux/slices/categorySlice'; // Correct path
 import { useNavigate } from 'react-router-dom';
+import Footer from '../../components/Footer/Footer';
 
 const Category = () => {
   const navigate = useNavigate();
@@ -16,7 +24,9 @@ const Category = () => {
   const [selectedCategory, setSelectedCategory] = useState(null); // Added state for selected category
 
   // Get categories from Redux state
-  const { categories, loading, error } = useSelector((state) => state.categories);
+  const { categories, loading, error } = useSelector(
+    (state) => state.categories
+  );
 
   useEffect(() => {
     // Dispatch action to fetch categories when the component mounts
@@ -67,8 +77,20 @@ const Category = () => {
           >
             {/* Dynamically rendering categories from Redux */}
             {categories?.map((category, index) => (
-              <Grid item lg={3} xs={6} sm={4} md={3} key={index} onClick={() => handleCardClick(category)}>
-                <SingleCard image={category.image.replace(/\\/g, '')} name={category.title} count={category.count} />
+              <Grid
+                item
+                lg={3}
+                xs={6}
+                sm={4}
+                md={3}
+                key={index}
+                onClick={() => handleCardClick(category)}
+              >
+                <SingleCard
+                  image={category.image.replace(/\\/g, '')}
+                  name={category.title}
+                  count={category.count}
+                />
               </Grid>
             ))}
           </Grid>
@@ -90,7 +112,11 @@ const Category = () => {
               >
                 {/* Dynamically render subcategories */}
                 {selectedCategory.subcategories?.map((subCategory, index) => (
-                  <div className="sub-cat-tab" key={index} onClick={() => navigate('/post-ad-sell')}>
+                  <div
+                    className="sub-cat-tab"
+                    key={index}
+                    onClick={() => navigate('/post-ad-sell')}
+                  >
                     <strong>{subCategory.title}</strong>
                   </div>
                 ))}
@@ -113,16 +139,17 @@ const Category = () => {
                 className="sub-cat-tab"
                 key={index}
                 onClick={() => {
-                  const categoryId = selectedCategory.id;  // Get category ID
-                  const subCategoryId = subCategory.id;    // Get subcategory ID
-                  navigate(`/post-ad-sell?type=for_sale&category=${categoryId}&subcategory=${subCategoryId}`);
-                  handleCloseDialog();  // Close the dialog
+                  const categoryId = selectedCategory.id; // Get category ID
+                  const subCategoryId = subCategory.id; // Get subcategory ID
+                  navigate(
+                    `/post-ad-sell?type=for_sale&category=${categoryId}&subcategory=${subCategoryId}`
+                  );
+                  handleCloseDialog(); // Close the dialog
                 }}
               >
                 <strong>{subCategory.title}</strong>
               </div>
             ))}
-
           </div>
         </DialogContent>
         <DialogActions>
@@ -131,6 +158,10 @@ const Category = () => {
           </Button>
         </DialogActions>
       </Dialog>
+
+      <br />
+
+      <Footer />
     </>
   );
 };

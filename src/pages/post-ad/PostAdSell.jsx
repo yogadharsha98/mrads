@@ -63,6 +63,25 @@ const PostAdSell = () => {
     return true;
   };
 
+  const clearFields = () => {
+    setSelectedCategory('');
+    setSelectedSubCategory('');
+    setSelectedFields({});
+    setSelectedDistrict('');
+    setSelectedCity('');
+    setCities('');
+    setTitleInput('');
+    setDescription('');
+    setPrice('');
+    setPriceUnit('');
+    setContactName('');
+    setWhatsappNumber('');
+    setTermsAccepted(false);
+    setImages([]);
+    setNumbers([]);
+    setInputNumber([]);
+  };
+
   const handleSubmit = async () => {
     if (validateForm()) {
       const postAd = {
@@ -89,6 +108,8 @@ const PostAdSell = () => {
         const response = await dispatch(createPostAd(postAd));
         console.log('Response:', response);
         toast.success('Ad posted successfully');
+
+        clearFields();
       } catch (error) {
         console.error('Error posting ad:', error);
         toast.error('Failed to post. Please try again.');
@@ -195,10 +216,6 @@ const PostAdSell = () => {
     : [];
 
   useEffect(() => {
-    dispatch(getFieldOptions({ categoryId: 1, subCategoryId: 4, fieldId: 5 }));
-  }, [dispatch]);
-
-  useEffect(() => {
     dispatch(fetchCategories());
     dispatch(fetchLocations());
   }, [dispatch]);
@@ -281,99 +298,109 @@ const PostAdSell = () => {
             </div>
           )}
 
-          {fields && fields.length > 0 ? (
-            fields.map((field) => (
-              <div key={field.id} className="form-field">
-                <strong>
-                  <p>{field.name}</p>
-                </strong>
+          {selectedSubCategory && (
+            <>
+              {fields && fields.length > 0 ? (
+                fields.map((field) => (
+                  <div key={field.id} className="form-field">
+                    <strong>
+                      <p>{field.name}</p>
+                    </strong>
 
-                {/* Render Select Dropdown */}
-                {field.type === 'select' && field.options && (
-                  <Select
-                    required
-                    value={selectedFields[field.id] || ''}
-                    onChange={(e) =>
-                      handleFieldChange(field.id, e.target.value)
-                    }
-                    className="post-drp-down"
-                    displayEmpty
-                  >
-                    <MenuItem value="" disabled>
-                      Select {field.name}
-                    </MenuItem>
-                    {field.options.map((option, index) => (
-                      <MenuItem key={index} value={option.value}>
-                        {option.value}
-                      </MenuItem>
-                    ))}
-                  </Select>
-                )}
+                    {/* Render Select Dropdown */}
+                    {field.type === 'select' && field.options && (
+                      <Select
+                        required
+                        value={selectedFields[field.id] || ''}
+                        onChange={(e) =>
+                          handleFieldChange(field.id, e.target.value)
+                        }
+                        className="post-drp-down"
+                        displayEmpty
+                      >
+                        <MenuItem value="" disabled>
+                          Select {field.name}
+                        </MenuItem>
+                        {field.options.map((option, index) => (
+                          <MenuItem key={index} value={option.value}>
+                            {option.value}
+                          </MenuItem>
+                        ))}
+                      </Select>
+                    )}
 
-                {/* Render Text Input */}
-                {field.type === 'text' && (
-                  <TextField
-                    required
-                    value={selectedFields[field.id] || ''}
-                    onChange={(e) =>
-                      handleFieldChange(field.id, e.target.value)
-                    }
-                    className="title"
-                  />
-                )}
+                    {/* Render Text Input */}
+                    {field.type === 'text' && (
+                      <TextField
+                        required
+                        value={selectedFields[field.id] || ''}
+                        onChange={(e) =>
+                          handleFieldChange(field.id, e.target.value)
+                        }
+                        className="title"
+                      />
+                    )}
 
-                {/* Render Checkbox Group */}
-                {/* Render Checkbox Group */}
-                {field.type === 'checkbox_multiple' && field.options && (
-                  <div className="check-box-field">
-                    {field.options.map((option) => (
-                      <label key={option.id}>
-                        <input
-                          type="checkbox"
-                          checked={
-                            selectedFields[field.id]?.includes(option.value) ||
-                            false
-                          }
-                          onChange={(e) =>
-                            handleFieldChange(
-                              field.id,
-                              option.value,
-                              e.target.checked
-                            )
-                          }
-                        />
-                        {option.value}
-                      </label>
-                    ))}
+                    {/* Render Checkbox Group */}
+                    {/* Render Checkbox Group */}
+                    {field.type === 'checkbox_multiple' && field.options && (
+                      <div className="check-box-field">
+                        {field.options.map((option) => (
+                          <label key={option.id}>
+                            <input
+                              type="checkbox"
+                              checked={
+                                selectedFields[field.id]?.includes(
+                                  option.value
+                                ) || false
+                              }
+                              onChange={(e) =>
+                                handleFieldChange(
+                                  field.id,
+                                  option.value,
+                                  e.target.checked
+                                )
+                              }
+                            />
+                            {option.value}
+                          </label>
+                        ))}
+                      </div>
+                    )}
+
+                    {/* Render Radio Buttons */}
+                    {field.type === 'radio' && field.options && (
+                      <div className="radio-field">
+                        {field.options.map((option) => (
+                          <label
+                            key={option.id}
+                            style={{ marginRight: '10px' }}
+                          >
+                            <input
+                              required
+                              type="radio"
+                              name={`radio-${field.id}`} // Unique name for each radio group
+                              value={option.value}
+                              checked={
+                                selectedFields[field.id] === option.value
+                              }
+                              onChange={(e) =>
+                                handleFieldChange(field.id, e.target.value)
+                              }
+                            />
+                            {option.value}
+                          </label>
+                        ))}
+                      </div>
+                    )}
                   </div>
-                )}
-
-                {/* Render Radio Buttons */}
-                {field.type === 'radio' && field.options && (
-                  <div className="radio-field">
-                    {field.options.map((option) => (
-                      <label key={option.id} style={{ marginRight: '10px' }}>
-                        <input
-                          required
-                          type="radio"
-                          name={`radio-${field.id}`} // Unique name for each radio group
-                          value={option.value}
-                          checked={selectedFields[field.id] === option.value}
-                          onChange={(e) =>
-                            handleFieldChange(field.id, e.target.value)
-                          }
-                        />
-                        {option.value}
-                      </label>
-                    ))}
-                  </div>
-                )}
-              </div>
-            ))
-          ) : isLoading ? (
-            <p>Loading fields...</p>
-          ) : (
-            <></>
+                ))
+              ) : isLoading ? (
+                <p>Loading fields...</p>
+              ) : (
+                <></>
+              )}
+            </>
           )}
 
           <hr />
